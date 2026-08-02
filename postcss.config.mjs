@@ -1,6 +1,7 @@
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    '@tailwindcss/postcss': {}, // C'est cette ligne exacte qui corrige l'erreur !
+    autoprefixer: {},
   },
 };
 
