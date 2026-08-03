@@ -1,5 +1,6 @@
 "use client";
 import dynamic from 'next/dynamic';
+import Link from "next/link"; 
 
 const MapDynamique = dynamic(() => import('./components/MapDynamique'), {
   ssr: false, // Désactive le rendu serveur pour la carte
@@ -22,11 +23,12 @@ export default function PageAccueil() {
         {/* MENU */}
         <div className="flex items-center gap-8">
           <a href="#" className="text-sm font-medium text-white hover:text-[#FF5722] transition-colors">Accueil</a>
-          <a href="#" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">Devenir Partenaire</a>
-          <a href="#" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">Espace Dépôt</a>
-          <button className="rounded-md bg-[#FF5722] px-4 py-2 text-sm font-semibold text-white hover:bg-[#e04e1f] transition-colors">
-            Connexion Client
-          </button>
+          <Link href="/devenir-depot" className="text-sm font-medium text-white hover:text-[#FF5722] transition-colors">
+            Devenir Partenaire
+          </Link>
+          <Link href="/connexion" className="rounded-md bg-[#FF5722] px-4 py-2 text-sm font-semibold text-white hover:bg-[#e04e1f] transition-colors">
+           Connexion 
+          </Link>
         </div>
       </nav>
 
@@ -53,9 +55,9 @@ export default function PageAccueil() {
             <button className="rounded-md bg-[#FF5722] px-6 py-3 text-sm font-semibold text-white hover:bg-[#e04e1f] transition-all shadow-lg shadow-[#FF5722]/20">
               Commander maintenant →
             </button>
-            <button className="rounded-md bg-gray-800/80 border border-gray-700 px-6 py-3 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white transition-all">
+            <Link href="/devenir-depot" className="rounded-md bg-gray-800/80 border border-gray-700 px-6 py-3 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white transition-all">
               Devenir dépôt partenaire
-            </button>
+            </Link>
           </div>
 
           {/* PETITS CHIFFRES STATS */}
