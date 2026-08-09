@@ -6,19 +6,31 @@ export default function PageDevenirDepot() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50 text-gray-800 font-sans antialiased">
       
-      {/* NAVBAR */}
-      <nav className="flex items-center justify-between px-12 py-6 bg-[#0B0F19] text-white border-b border-gray-800">
-        <Link href="/" className="flex items-center gap-3 cursor-pointer select-none">
-          <div className="relative flex items-center justify-center h-6 w-6 rounded-full border-2 border-[#FF5722]">
-            <div className="h-2 w-2 rounded-full bg-[#FF5722]"></div>
-          </div>
-          <span className="text-2xl font-bold tracking-tight text-white">GazLoc</span>
-        </Link>
-        <div className="flex items-center gap-8">
-          <Link href="/" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">Accueil</Link>
-          <Link href="/devenir-depot" className="text-sm font-semibold text-white border-b-2 border-[#FF5722] pb-1">Devenir dépôt</Link>
-        </div>
-      </nav>
+     {/* NAVBAR */}
+<nav className="flex items-center justify-between px-12 py-6 bg-[#0B0F19] text-white border-b border-gray-800">
+  <Link href="/" className="flex items-center gap-3 cursor-pointer select-none">
+    <div className="relative flex items-center justify-center h-6 w-6 rounded-full border-2 border-[#FF5722]">
+      <div className="h-2 w-2 rounded-full bg-[#FF5722]"></div>
+    </div>
+    <span className="text-2xl font-bold tracking-tight text-white">GazLoc</span>
+  </Link>
+  
+  <div className="flex items-center gap-8">
+    <Link href="/" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+      Accueil
+    </Link>
+    <Link href="/devenir-depot" className="text-sm font-semibold text-white border-b-2 border-[#FF5722] pb-1">
+      Devenir partenaire
+    </Link>
+    {/* BOUTON DE CONNEXION POUR LE DÉPÔT */}
+    <Link 
+      href="/connexion-depot" 
+      className="rounded-md bg-[#FF5722]/10 border border-[#FF5722]/30 px-3.5 py-1.5 text-xs font-bold text-[#FF5722] hover:bg-[#FF5722] hover:text-white transition-all"
+    >
+      Connexion Dépôt 
+    </Link>
+  </div>
+</nav>
 
       {/* CONTENU PRINCIPAL */}
       <main className="flex-1 max-w-4xl mx-auto px-6 py-16 w-full flex flex-col items-center">
@@ -77,6 +89,12 @@ export default function PageDevenirDepot() {
               </div>
             ))}
           </div>
+          <p className="text-center text-xs text-gray-400 mt-4">
+  Vous avez déjà reçu vos identifiants par WhatsApp ?{" "}
+  <Link href="/connexion-depot" className="font-bold text-[#FF5722] hover:underline">
+    Connectez-vous à votre espace dépôt
+  </Link>
+</p>
 
           {/* BOUTON D'ACTION PRINCIPAL */}
           <div className="pt-4">
