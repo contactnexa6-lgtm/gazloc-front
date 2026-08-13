@@ -38,7 +38,7 @@ export default function DashboardDepot() {
             Devenir dépôt
           </Link>
         </div>
-      </nav>
+      </nav> 
 
       {/* CONTENU AVEC SIDEBAR */}
       <div className="flex flex-1">
